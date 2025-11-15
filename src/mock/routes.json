@@ -1,0 +1,7 @@
+{
+  "/api/*": "/$1",
+  "/auth/login": "/users?email=:email",
+  "/rooms/available": "/rooms?status=available",
+  "/reservations/today": "/reservations?checkInDate=:date"
+}
+

@@ -1,0 +1,352 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@roommaster.com",
+      "password": "admin123",
+      "name": "Admin User",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "receptionist@roommaster.com",
+      "password": "reception123",
+      "name": "Jane Smith",
+      "role": "receptionist"
+    },
+    {
+      "id": 3,
+      "email": "manager@roommaster.com",
+      "password": "manager123",
+      "name": "Bob Manager",
+      "role": "manager"
+    }
+  ],
+  "roomTypes": [
+    {
+      "id": 1,
+      "name": "Standard Single",
+      "basePrice": 50,
+      "capacity": 1,
+      "amenities": ["WiFi", "TV", "Air Conditioning"],
+      "description": "Comfortable single room with basic amenities"
+    },
+    {
+      "id": 2,
+      "name": "Standard Double",
+      "basePrice": 80,
+      "capacity": 2,
+      "amenities": ["WiFi", "TV", "Air Conditioning", "Mini Bar"],
+      "description": "Spacious double room perfect for couples"
+    },
+    {
+      "id": 3,
+      "name": "Deluxe Suite",
+      "basePrice": 150,
+      "capacity": 3,
+      "amenities": ["WiFi", "Smart TV", "Air Conditioning", "Mini Bar", "Balcony", "King Bed"],
+      "description": "Luxurious suite with premium amenities"
+    },
+    {
+      "id": 4,
+      "name": "Family Room",
+      "basePrice": 120,
+      "capacity": 4,
+      "amenities": ["WiFi", "TV", "Air Conditioning", "Mini Kitchen"],
+      "description": "Large room suitable for families"
+    }
+  ],
+  "rooms": [
+    { "id": 1, "roomNumber": "101", "roomTypeId": 1, "status": "available", "floor": 1 },
+    { "id": 2, "roomNumber": "102", "roomTypeId": 1, "status": "available", "floor": 1 },
+    { "id": 3, "roomNumber": "103", "roomTypeId": 2, "status": "occupied", "floor": 1 },
+    { "id": 4, "roomNumber": "104", "roomTypeId": 2, "status": "available", "floor": 1 },
+    { "id": 5, "roomNumber": "201", "roomTypeId": 2, "status": "occupied", "floor": 2 },
+    { "id": 6, "roomNumber": "202", "roomTypeId": 2, "status": "cleaning", "floor": 2 },
+    { "id": 7, "roomNumber": "203", "roomTypeId": 3, "status": "available", "floor": 2 },
+    { "id": 8, "roomNumber": "204", "roomTypeId": 3, "status": "occupied", "floor": 2 },
+    { "id": 9, "roomNumber": "301", "roomTypeId": 3, "status": "maintenance", "floor": 3 },
+    { "id": 10, "roomNumber": "302", "roomTypeId": 4, "status": "available", "floor": 3 },
+    { "id": 11, "roomNumber": "303", "roomTypeId": 4, "status": "available", "floor": 3 },
+    { "id": 12, "roomNumber": "304", "roomTypeId": 1, "status": "available", "floor": 3 },
+    { "id": 13, "roomNumber": "401", "roomTypeId": 1, "status": "available", "floor": 4 },
+    { "id": 14, "roomNumber": "402", "roomTypeId": 2, "status": "occupied", "floor": 4 },
+    { "id": 15, "roomNumber": "403", "roomTypeId": 2, "status": "available", "floor": 4 },
+    { "id": 16, "roomNumber": "404", "roomTypeId": 3, "status": "available", "floor": 4 },
+    { "id": 17, "roomNumber": "501", "roomTypeId": 3, "status": "occupied", "floor": 5 },
+    { "id": 18, "roomNumber": "502", "roomTypeId": 4, "status": "available", "floor": 5 },
+    { "id": 19, "roomNumber": "503", "roomTypeId": 4, "status": "available", "floor": 5 },
+    { "id": 20, "roomNumber": "504", "roomTypeId": 1, "status": "available", "floor": 5 }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "guestName": "John Doe",
+      "guestId": "ID123456",
+      "phone": "+1-555-0101",
+      "email": "john.doe@email.com",
+      "roomId": 3,
+      "checkInDate": "2025-11-14",
+      "checkOutDate": "2025-11-17",
+      "status": "confirmed",
+      "notes": "Late check-in requested"
+    },
+    {
+      "id": 2,
+      "guestName": "Alice Johnson",
+      "guestId": "ID789012",
+      "phone": "+1-555-0102",
+      "email": "alice.j@email.com",
+      "roomId": 5,
+      "checkInDate": "2025-11-13",
+      "checkOutDate": "2025-11-16",
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "guestName": "Bob Smith",
+      "guestId": "ID345678",
+      "phone": "+1-555-0103",
+      "email": "bob.smith@email.com",
+      "roomId": 8,
+      "checkInDate": "2025-11-15",
+      "checkOutDate": "2025-11-18",
+      "status": "confirmed",
+      "notes": "Honeymoon package"
+    },
+    {
+      "id": 4,
+      "guestName": "Carol White",
+      "guestId": "ID901234",
+      "phone": "+1-555-0104",
+      "email": "carol.w@email.com",
+      "roomId": 14,
+      "checkInDate": "2025-11-15",
+      "checkOutDate": "2025-11-20",
+      "status": "pending",
+      "notes": ""
+    },
+    {
+      "id": 5,
+      "guestName": "David Brown",
+      "guestId": "ID567890",
+      "phone": "+1-555-0105",
+      "email": "david.b@email.com",
+      "roomId": 17,
+      "checkInDate": "2025-11-16",
+      "checkOutDate": "2025-11-19",
+      "status": "confirmed",
+      "notes": "Business traveler"
+    },
+    {
+      "id": 6,
+      "guestName": "Emma Davis",
+      "guestId": "ID234567",
+      "phone": "+1-555-0106",
+      "email": "emma.d@email.com",
+      "roomId": 7,
+      "checkInDate": "2025-11-18",
+      "checkOutDate": "2025-11-21",
+      "status": "pending",
+      "notes": ""
+    }
+  ],
+  "rentalSlips": [
+    {
+      "id": 1,
+      "reservationId": 1,
+      "checkInDate": "2025-11-14T15:00:00",
+      "guestName": "John Doe",
+      "roomId": 3,
+      "deposit": 100
+    },
+    {
+      "id": 2,
+      "reservationId": 2,
+      "checkInDate": "2025-11-13T14:30:00",
+      "guestName": "Alice Johnson",
+      "roomId": 5,
+      "deposit": 120
+    },
+    {
+      "id": 3,
+      "reservationId": 3,
+      "checkInDate": "2025-11-15T16:00:00",
+      "guestName": "Bob Smith",
+      "roomId": 8,
+      "deposit": 200
+    },
+    {
+      "id": 4,
+      "reservationId": 4,
+      "checkInDate": "2025-11-15T13:00:00",
+      "guestName": "Carol White",
+      "roomId": 14,
+      "deposit": 100
+    },
+    {
+      "id": 5,
+      "reservationId": 5,
+      "checkInDate": "2025-11-16T15:30:00",
+      "guestName": "David Brown",
+      "roomId": 17,
+      "deposit": 200
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Room Service - Breakfast",
+      "price": 25,
+      "category": "Food & Beverage",
+      "description": "Continental breakfast delivered to room"
+    },
+    {
+      "id": 2,
+      "name": "Laundry Service",
+      "price": 30,
+      "category": "Laundry",
+      "description": "Same-day laundry service"
+    },
+    {
+      "id": 3,
+      "name": "Airport Transfer",
+      "price": 50,
+      "category": "Transport",
+      "description": "One-way airport shuttle"
+    },
+    {
+      "id": 4,
+      "name": "Spa Treatment - 60min",
+      "price": 80,
+      "category": "Spa",
+      "description": "Relaxing massage session"
+    },
+    {
+      "id": 5,
+      "name": "Mini Bar Restock",
+      "price": 35,
+      "category": "Food & Beverage",
+      "description": "Premium mini bar items"
+    },
+    {
+      "id": 6,
+      "name": "Room Service - Dinner",
+      "price": 45,
+      "category": "Food & Beverage",
+      "description": "Three-course dinner"
+    }
+  ],
+  "serviceUsage": [
+    {
+      "id": 1,
+      "rentalSlipId": 1,
+      "serviceId": 1,
+      "quantity": 2,
+      "date": "2025-11-15"
+    },
+    {
+      "id": 2,
+      "rentalSlipId": 1,
+      "serviceId": 2,
+      "quantity": 1,
+      "date": "2025-11-15"
+    },
+    {
+      "id": 3,
+      "rentalSlipId": 2,
+      "serviceId": 4,
+      "quantity": 1,
+      "date": "2025-11-14"
+    },
+    {
+      "id": 4,
+      "rentalSlipId": 3,
+      "serviceId": 1,
+      "quantity": 2,
+      "date": "2025-11-16"
+    },
+    {
+      "id": 5,
+      "rentalSlipId": 3,
+      "serviceId": 5,
+      "quantity": 1,
+      "date": "2025-11-16"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "role": "admin",
+      "email": "admin@roommaster.com",
+      "phone": "+1-555-1001",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "role": "receptionist",
+      "email": "receptionist@roommaster.com",
+      "phone": "+1-555-1002",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Bob Manager",
+      "role": "manager",
+      "email": "manager@roommaster.com",
+      "phone": "+1-555-1003",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Mary Housekeeper",
+      "role": "housekeeper",
+      "email": "mary.h@roommaster.com",
+      "phone": "+1-555-1004",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "Tom Maintenance",
+      "role": "maintenance",
+      "email": "tom.m@roommaster.com",
+      "phone": "+1-555-1005",
+      "status": "active"
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "rentalSlipId": 1,
+      "totalAmount": 380,
+      "paidAmount": 380,
+      "paymentMethod": "credit_card",
+      "createdAt": "2025-11-17T11:00:00",
+      "items": [
+        { "description": "Room Charge (3 nights)", "amount": 240 },
+        { "description": "Breakfast x2", "amount": 50 },
+        { "description": "Laundry Service", "amount": 30 },
+        { "description": "Deposit Refund", "amount": -100 },
+        { "description": "Tax (10%)", "amount": 38 }
+      ]
+    },
+    {
+      "id": 2,
+      "rentalSlipId": 2,
+      "totalAmount": 352,
+      "paidAmount": 352,
+      "paymentMethod": "cash",
+      "createdAt": "2025-11-16T10:30:00",
+      "items": [
+        { "description": "Room Charge (3 nights)", "amount": 240 },
+        { "description": "Spa Treatment", "amount": 80 },
+        { "description": "Deposit Refund", "amount": -120 },
+        { "description": "Tax (10%)", "amount": 32 }
+      ]
+    }
+  ]
+}
+
