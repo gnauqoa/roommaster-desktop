@@ -1,0 +1,31 @@
+{
+  "title": "Nhận phòng",
+  "description": "Xử lý nhận phòng cho khách",
+  "todayCheckIns": "Dự kiến nhận phòng hôm nay",
+  "searchPlaceholder": "Tìm theo tên hoặc CMND...",
+  "noCheckIns": "Không có lịch nhận phòng hôm nay",
+  "table": {
+    "guestName": "Tên khách",
+    "guestId": "CMND/CCCD",
+    "room": "Phòng",
+    "checkInDate": "Ngày nhận phòng",
+    "checkOutDate": "Ngày trả phòng",
+    "phone": "Số điện thoại",
+    "action": "Thao tác"
+  },
+  "dialog": {
+    "title": "Xử lý nhận phòng"
+  },
+  "form": {
+    "guestName": "Tên khách",
+    "roomNumber": "Số phòng",
+    "depositAmount": "Tiền đặt cọc",
+    "checkIn": "Nhận phòng",
+    "checkOut": "Trả phòng"
+  },
+  "button": {
+    "checkIn": "Nhận phòng",
+    "complete": "Hoàn tất nhận phòng"
+  }
+}
+

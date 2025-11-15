@@ -1,0 +1,38 @@
+{
+  "title": "Reservations",
+  "description": "Manage room reservations",
+  "searchAvailability": "Search Availability",
+  "newReservation": "New Reservation",
+  "allReservations": "All Reservations",
+  "table": {
+    "guestName": "Guest Name",
+    "room": "Room",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "status": "Status"
+  },
+  "dialog": {
+    "add": "New Reservation",
+    "edit": "Edit Reservation",
+    "searchAvailability": "Search Available Rooms",
+    "availableRooms": "Available Rooms ({{count}})"
+  },
+  "form": {
+    "guestName": "Guest Name",
+    "guestId": "Guest ID",
+    "phone": "Phone",
+    "email": "Email",
+    "room": "Room",
+    "checkInDate": "Check-in Date",
+    "checkOutDate": "Check-out Date",
+    "notes": "Notes",
+    "roomType": "Room Type (Optional)",
+    "anyType": "Any type",
+    "selectRoom": "Select room"
+  },
+  "cancel": {
+    "title": "Cancel Reservation",
+    "description": "Are you sure you want to cancel this reservation?"
+  }
+}
+

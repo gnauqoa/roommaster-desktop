@@ -1,0 +1,31 @@
+{
+  "title": "Check-in",
+  "description": "Process guest check-ins",
+  "todayCheckIns": "Today's Expected Check-ins",
+  "searchPlaceholder": "Search by guest name or ID...",
+  "noCheckIns": "No check-ins scheduled for today",
+  "table": {
+    "guestName": "Guest Name",
+    "guestId": "Guest ID",
+    "room": "Room",
+    "checkInDate": "Check-in Date",
+    "checkOutDate": "Check-out Date",
+    "phone": "Phone",
+    "action": "Action"
+  },
+  "dialog": {
+    "title": "Process Check-in"
+  },
+  "form": {
+    "guestName": "Guest Name",
+    "roomNumber": "Room Number",
+    "depositAmount": "Deposit Amount",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out"
+  },
+  "button": {
+    "checkIn": "Check In",
+    "complete": "Complete Check-in"
+  }
+}
+

@@ -1,0 +1,22 @@
+{
+  "title": "Bảng điều khiển",
+  "description": "Tổng quan hoạt động khách sạn",
+  "kpis": {
+    "totalRooms": "Tổng số phòng",
+    "occupancyRate": "Tỷ lệ lấp đầy",
+    "todayRevenue": "Doanh thu hôm nay",
+    "checkInsToday": "Nhận phòng hôm nay",
+    "availableRooms": "Phòng trống",
+    "occupiedRooms": "Phòng đang sử dụng",
+    "checkOutsToday": "Trả phòng hôm nay"
+  },
+  "charts": {
+    "revenueTrend": "Xu hướng doanh thu (7 ngày gần nhất)",
+    "roomStatusDistribution": "Phân bổ trạng thái phòng",
+    "revenue": "Doanh thu"
+  },
+  "stats": {
+    "title": "Thống kê phòng"
+  }
+}
+

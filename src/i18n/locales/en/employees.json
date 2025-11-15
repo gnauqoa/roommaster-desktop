@@ -1,0 +1,35 @@
+{
+  "title": "Employees",
+  "description": "Manage hotel staff members",
+  "addButton": "Add Employee",
+  "allEmployees": "All Employees",
+  "table": {
+    "name": "Name",
+    "role": "Role",
+    "email": "Email",
+    "phone": "Phone",
+    "status": "Status"
+  },
+  "dialog": {
+    "add": "Add Employee",
+    "edit": "Edit Employee"
+  },
+  "form": {
+    "name": "Name",
+    "role": "Role",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "roles": {
+    "admin": "Admin",
+    "receptionist": "Receptionist",
+    "manager": "Manager",
+    "housekeeper": "Housekeeper",
+    "maintenance": "Maintenance"
+  },
+  "delete": {
+    "title": "Delete Employee",
+    "description": "Are you sure you want to delete this employee?"
+  }
+}
+

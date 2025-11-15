@@ -1,0 +1,25 @@
+{
+  "title": "Invoices",
+  "description": "View and manage billing invoices",
+  "allInvoices": "All Invoices",
+  "searchPlaceholder": "Search by ID...",
+  "noInvoices": "No invoices found",
+  "table": {
+    "invoiceId": "Invoice ID",
+    "date": "Date",
+    "totalAmount": "Total Amount",
+    "paidAmount": "Paid Amount",
+    "paymentMethod": "Payment Method"
+  },
+  "dialog": {
+    "title": "Invoice Details"
+  },
+  "details": {
+    "invoiceId": "Invoice ID",
+    "date": "Date",
+    "paymentMethod": "Payment Method",
+    "rentalSlipId": "Rental Slip ID",
+    "billBreakdown": "Bill Breakdown"
+  }
+}
+

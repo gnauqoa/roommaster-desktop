@@ -1,0 +1,34 @@
+{
+  "title": "Dịch vụ",
+  "description": "Quản lý dịch vụ khách sạn",
+  "addButton": "Thêm dịch vụ",
+  "allServices": "Tất cả dịch vụ",
+  "table": {
+    "serviceName": "Tên dịch vụ",
+    "category": "Danh mục",
+    "price": "Giá",
+    "description": "Mô tả"
+  },
+  "dialog": {
+    "add": "Thêm dịch vụ",
+    "edit": "Sửa dịch vụ"
+  },
+  "form": {
+    "serviceName": "Tên dịch vụ",
+    "category": "Danh mục",
+    "price": "Giá",
+    "description": "Mô tả"
+  },
+  "categories": {
+    "foodBeverage": "Ăn uống",
+    "laundry": "Giặt là",
+    "spa": "Spa",
+    "transport": "Vận chuyển",
+    "other": "Khác"
+  },
+  "delete": {
+    "title": "Xóa dịch vụ",
+    "description": "Bạn có chắc chắn muốn xóa dịch vụ này?"
+  }
+}
+

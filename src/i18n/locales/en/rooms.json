@@ -1,0 +1,58 @@
+{
+  "roomTypes": {
+    "title": "Room Types",
+    "description": "Manage different room categories",
+    "addButton": "Add Room Type",
+    "table": {
+      "name": "Name",
+      "basePrice": "Base Price",
+      "capacity": "Capacity",
+      "amenities": "Amenities"
+    },
+    "dialog": {
+      "add": "Add Room Type",
+      "edit": "Edit Room Type"
+    },
+    "form": {
+      "name": "Name",
+      "basePrice": "Base Price",
+      "capacity": "Capacity",
+      "amenities": "Amenities (comma-separated)",
+      "amenitiesPlaceholder": "WiFi, TV, Air Conditioning",
+      "description": "Description"
+    },
+    "delete": {
+      "title": "Delete Room Type",
+      "description": "Are you sure you want to delete this room type? This action cannot be undone."
+    }
+  },
+  "rooms": {
+    "title": "Rooms",
+    "description": "Manage hotel rooms and their status",
+    "addButton": "Add Room",
+    "filterByStatus": "Filter by status",
+    "allRooms": "All Rooms",
+    "table": {
+      "roomNumber": "Room Number",
+      "type": "Type",
+      "floor": "Floor",
+      "status": "Status"
+    },
+    "dialog": {
+      "add": "Add Room",
+      "edit": "Edit Room"
+    },
+    "form": {
+      "roomNumber": "Room Number",
+      "roomType": "Room Type",
+      "floor": "Floor",
+      "status": "Status",
+      "selectRoomType": "Select room type"
+    },
+    "delete": {
+      "title": "Delete Room",
+      "description": "Are you sure you want to delete this room?"
+    }
+  }
+}
+

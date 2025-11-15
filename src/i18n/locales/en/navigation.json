@@ -1,0 +1,21 @@
+{
+  "dashboard": "Dashboard",
+  "rooms": "Rooms",
+  "roomTypes": "Room Types",
+  "reservations": "Reservations",
+  "checkIn": "Check-in",
+  "checkOut": "Check-out",
+  "services": "Services",
+  "employees": "Employees",
+  "invoices": "Invoices",
+  "reports": "Reports",
+  "admin": "Admin",
+  "groups": {
+    "rooms": "Rooms",
+    "reservations": "Reservations",
+    "services": "Services",
+    "reports": "Reports",
+    "admin": "Admin"
+  }
+}
+

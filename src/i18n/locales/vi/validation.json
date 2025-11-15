@@ -1,0 +1,12 @@
+{
+  "required": "Trường này là bắt buộc",
+  "email": "Vui lòng nhập địa chỉ email hợp lệ",
+  "phone": "Vui lòng nhập số điện thoại hợp lệ",
+  "positiveNumber": "Vui lòng nhập số dương",
+  "integer": "Vui lòng nhập số nguyên",
+  "dateInvalid": "Vui lòng nhập ngày hợp lệ",
+  "dateRange": "Ngày trả phòng phải sau ngày nhận phòng",
+  "minLength": "Phải có ít nhất {{min}} ký tự",
+  "maxLength": "Tối đa {{max}} ký tự"
+}
+

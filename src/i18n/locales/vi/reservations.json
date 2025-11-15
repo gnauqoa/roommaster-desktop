@@ -1,0 +1,38 @@
+{
+  "title": "Đặt phòng",
+  "description": "Quản lý đặt phòng",
+  "searchAvailability": "Tìm phòng trống",
+  "newReservation": "Đặt phòng mới",
+  "allReservations": "Tất cả đặt phòng",
+  "table": {
+    "guestName": "Tên khách",
+    "room": "Phòng",
+    "checkIn": "Nhận phòng",
+    "checkOut": "Trả phòng",
+    "status": "Trạng thái"
+  },
+  "dialog": {
+    "add": "Đặt phòng mới",
+    "edit": "Sửa đặt phòng",
+    "searchAvailability": "Tìm phòng trống",
+    "availableRooms": "Phòng trống ({{count}})"
+  },
+  "form": {
+    "guestName": "Tên khách",
+    "guestId": "CMND/CCCD",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "room": "Phòng",
+    "checkInDate": "Ngày nhận phòng",
+    "checkOutDate": "Ngày trả phòng",
+    "notes": "Ghi chú",
+    "roomType": "Loại phòng (Tùy chọn)",
+    "anyType": "Bất kỳ",
+    "selectRoom": "Chọn phòng"
+  },
+  "cancel": {
+    "title": "Hủy đặt phòng",
+    "description": "Bạn có chắc chắn muốn hủy đặt phòng này?"
+  }
+}
+

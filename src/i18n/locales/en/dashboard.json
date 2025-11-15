@@ -1,0 +1,22 @@
+{
+  "title": "Dashboard",
+  "description": "Overview of hotel operations",
+  "kpis": {
+    "totalRooms": "Total Rooms",
+    "occupancyRate": "Occupancy Rate",
+    "todayRevenue": "Today's Revenue",
+    "checkInsToday": "Check-ins Today",
+    "availableRooms": "Available Rooms",
+    "occupiedRooms": "Occupied Rooms",
+    "checkOutsToday": "Check-outs Today"
+  },
+  "charts": {
+    "revenueTrend": "Revenue Trend (Last 7 Days)",
+    "roomStatusDistribution": "Room Status Distribution",
+    "revenue": "Revenue"
+  },
+  "stats": {
+    "title": "Room Statistics"
+  }
+}
+

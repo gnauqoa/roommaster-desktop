@@ -9,8 +9,10 @@ import { LoadingSpinner } from '@/components/shared/LoadingSpinner';
 import { formatCurrency, formatPercentage } from '@/utils/formatters';
 import { DollarSign, Bed, TrendingUp, Users } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { useTranslation } from '@/i18n';
 
 const DashboardPage = () => {
+  const { t } = useTranslation('dashboard');
   const dispatch = useAppDispatch();
   const { kpis, revenueData, roomStatusDistribution, loading } = useAppSelector(
     (state) => state.dashboard
@@ -36,25 +38,25 @@ const DashboardPage = () => {
 
   const kpiCards = [
     {
-      title: 'Total Rooms',
+      title: t('kpis.totalRooms'),
       value: kpis.totalRooms,
       icon: Bed,
       color: 'text-blue-500',
     },
     {
-      title: 'Occupancy Rate',
+      title: t('kpis.occupancyRate'),
       value: formatPercentage(kpis.occupancyRate),
       icon: TrendingUp,
       color: 'text-green-500',
     },
     {
-      title: "Today's Revenue",
+      title: t('kpis.todayRevenue'),
       value: formatCurrency(kpis.todayRevenue),
       icon: DollarSign,
       color: 'text-purple-500',
     },
     {
-      title: 'Check-ins Today',
+      title: t('kpis.checkInsToday'),
       value: kpis.checkInsToday,
       icon: Users,
       color: 'text-orange-500',
@@ -64,8 +66,8 @@ const DashboardPage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground">Overview of hotel operations</p>
+        <h1 className="text-3xl font-bold">{t('title')}</h1>
+        <p className="text-muted-foreground">{t('description')}</p>
       </div>
 
       {/* KPI Cards */}
@@ -91,7 +93,7 @@ const DashboardPage = () => {
         {/* Revenue Trend Chart */}
         <Card>
           <CardHeader>
-            <CardTitle>Revenue Trend (Last 7 Days)</CardTitle>
+            <CardTitle>{t('charts.revenueTrend')}</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={300}>
@@ -117,7 +119,7 @@ const DashboardPage = () => {
                   type="monotone"
                   dataKey="revenue"
                   stroke="#8884d8"
-                  name="Revenue"
+                  name={t('charts.revenue')}
                   strokeWidth={2}
                 />
               </LineChart>
@@ -128,7 +130,7 @@ const DashboardPage = () => {
         {/* Room Status Distribution Chart */}
         <Card>
           <CardHeader>
-            <CardTitle>Room Status Distribution</CardTitle>
+            <CardTitle>{t('charts.roomStatusDistribution')}</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={300}>
@@ -138,7 +140,7 @@ const DashboardPage = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="count" fill="#82ca9d" name="Rooms" />
+                <Bar dataKey="count" fill="#82ca9d" name={t('units.rooms', { ns: 'common' })} />
               </BarChart>
             </ResponsiveContainer>
           </CardContent>
@@ -148,20 +150,20 @@ const DashboardPage = () => {
       {/* Quick Stats */}
       <Card>
         <CardHeader>
-          <CardTitle>Room Statistics</CardTitle>
+          <CardTitle>{t('stats.title')}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">Available Rooms</p>
+              <p className="text-sm text-muted-foreground">{t('kpis.availableRooms')}</p>
               <p className="text-2xl font-bold text-green-600">{kpis.availableRooms}</p>
             </div>
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">Occupied Rooms</p>
+              <p className="text-sm text-muted-foreground">{t('kpis.occupiedRooms')}</p>
               <p className="text-2xl font-bold text-blue-600">{kpis.occupiedRooms}</p>
             </div>
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">Check-outs Today</p>
+              <p className="text-sm text-muted-foreground">{t('kpis.checkOutsToday')}</p>
               <p className="text-2xl font-bold text-orange-600">{kpis.checkOutsToday}</p>
             </div>
           </div>

@@ -1,0 +1,21 @@
+{
+  "dashboard": "Bảng điều khiển",
+  "rooms": "Phòng",
+  "roomTypes": "Loại phòng",
+  "reservations": "Đặt phòng",
+  "checkIn": "Nhận phòng",
+  "checkOut": "Trả phòng",
+  "services": "Dịch vụ",
+  "employees": "Nhân viên",
+  "invoices": "Hóa đơn",
+  "reports": "Báo cáo",
+  "admin": "Quản trị",
+  "groups": {
+    "rooms": "Phòng",
+    "reservations": "Đặt phòng",
+    "services": "Dịch vụ",
+    "reports": "Báo cáo",
+    "admin": "Quản trị"
+  }
+}
+

@@ -1,0 +1,25 @@
+{
+  "title": "Hóa đơn",
+  "description": "Xem và quản lý hóa đơn",
+  "allInvoices": "Tất cả hóa đơn",
+  "searchPlaceholder": "Tìm theo mã hóa đơn...",
+  "noInvoices": "Không tìm thấy hóa đơn",
+  "table": {
+    "invoiceId": "Mã hóa đơn",
+    "date": "Ngày",
+    "totalAmount": "Tổng tiền",
+    "paidAmount": "Đã thanh toán",
+    "paymentMethod": "Phương thức thanh toán"
+  },
+  "dialog": {
+    "title": "Chi tiết hóa đơn"
+  },
+  "details": {
+    "invoiceId": "Mã hóa đơn",
+    "date": "Ngày",
+    "paymentMethod": "Phương thức thanh toán",
+    "rentalSlipId": "Mã phiếu thuê",
+    "billBreakdown": "Chi tiết hóa đơn"
+  }
+}
+

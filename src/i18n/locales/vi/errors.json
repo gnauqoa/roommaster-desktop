@@ -1,0 +1,14 @@
+{
+  "network": "Lỗi mạng. Vui lòng kiểm tra kết nối.",
+  "unauthorized": "Không có quyền truy cập. Vui lòng đăng nhập lại.",
+  "notFound": "Không tìm thấy tài nguyên",
+  "serverError": "Lỗi máy chủ. Vui lòng thử lại sau.",
+  "invalidCredentials": "Email hoặc mật khẩu không đúng",
+  "loginFailed": "Đăng nhập thất bại. Vui lòng thử lại.",
+  "fetchFailed": "Không thể tải {{resource}}",
+  "createFailed": "Không thể tạo {{resource}}",
+  "updateFailed": "Không thể cập nhật {{resource}}",
+  "deleteFailed": "Không thể xóa {{resource}}",
+  "unknown": "Đã xảy ra lỗi không mong muốn"
+}
+

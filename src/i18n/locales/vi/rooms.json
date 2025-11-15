@@ -1,0 +1,58 @@
+{
+  "roomTypes": {
+    "title": "Loại phòng",
+    "description": "Quản lý các loại phòng khác nhau",
+    "addButton": "Thêm loại phòng",
+    "table": {
+      "name": "Tên",
+      "basePrice": "Giá cơ bản",
+      "capacity": "Sức chứa",
+      "amenities": "Tiện nghi"
+    },
+    "dialog": {
+      "add": "Thêm loại phòng",
+      "edit": "Sửa loại phòng"
+    },
+    "form": {
+      "name": "Tên loại phòng",
+      "basePrice": "Giá cơ bản",
+      "capacity": "Sức chứa",
+      "amenities": "Tiện nghi (phân cách bằng dấu phẩy)",
+      "amenitiesPlaceholder": "WiFi, TV, Điều hòa",
+      "description": "Mô tả"
+    },
+    "delete": {
+      "title": "Xóa loại phòng",
+      "description": "Bạn có chắc chắn muốn xóa loại phòng này? Hành động này không thể hoàn tác."
+    }
+  },
+  "rooms": {
+    "title": "Phòng",
+    "description": "Quản lý phòng khách sạn và trạng thái",
+    "addButton": "Thêm phòng",
+    "filterByStatus": "Lọc theo trạng thái",
+    "allRooms": "Tất cả phòng",
+    "table": {
+      "roomNumber": "Số phòng",
+      "type": "Loại",
+      "floor": "Tầng",
+      "status": "Trạng thái"
+    },
+    "dialog": {
+      "add": "Thêm phòng",
+      "edit": "Sửa phòng"
+    },
+    "form": {
+      "roomNumber": "Số phòng",
+      "roomType": "Loại phòng",
+      "floor": "Tầng",
+      "status": "Trạng thái",
+      "selectRoomType": "Chọn loại phòng"
+    },
+    "delete": {
+      "title": "Xóa phòng",
+      "description": "Bạn có chắc chắn muốn xóa phòng này?"
+    }
+  }
+}
+

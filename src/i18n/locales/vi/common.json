@@ -1,0 +1,49 @@
+{
+  "buttons": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "create": "Tạo mới",
+    "update": "Cập nhật",
+    "search": "Tìm kiếm",
+    "filter": "Lọc",
+    "view": "Xem",
+    "close": "Đóng",
+    "add": "Thêm",
+    "remove": "Xóa bỏ",
+    "confirm": "Xác nhận",
+    "back": "Quay lại",
+    "next": "Tiếp theo"
+  },
+  "status": {
+    "active": "Hoạt động",
+    "inactive": "Không hoạt động",
+    "available": "Trống",
+    "occupied": "Đang sử dụng",
+    "pending": "Chờ xử lý",
+    "confirmed": "Đã xác nhận",
+    "cancelled": "Đã hủy",
+    "cleaning": "Đang dọn dẹp",
+    "maintenance": "Bảo trì"
+  },
+  "time": {
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "week": "Tuần",
+    "month": "Tháng",
+    "year": "Năm"
+  },
+  "units": {
+    "night": "đêm",
+    "nights": "đêm",
+    "guest": "khách",
+    "guests": "khách",
+    "room": "phòng",
+    "rooms": "phòng"
+  },
+  "actions": "Thao tác",
+  "noData": "Không có dữ liệu",
+  "loading": "Đang tải..."
+}
+

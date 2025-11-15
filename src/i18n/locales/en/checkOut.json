@@ -1,0 +1,41 @@
+{
+  "title": "Check-out",
+  "description": "Process guest check-outs and generate invoices",
+  "occupiedRooms": "Occupied Rooms",
+  "noOccupiedRooms": "No occupied rooms",
+  "table": {
+    "roomNumber": "Room Number",
+    "floor": "Floor",
+    "guest": "Guest",
+    "action": "Action"
+  },
+  "dialog": {
+    "title": "Process Check-out"
+  },
+  "billSummary": {
+    "title": "Bill Summary",
+    "roomCharges": "Room Charges",
+    "serviceCharges": "Service Charges",
+    "tax": "Tax (10%)",
+    "totalAmount": "Total Amount",
+    "depositRefund": "Deposit Refund",
+    "finalAmount": "Final Amount",
+    "servicesUsed": "Services Used",
+    "serviceQty": "Service (Qty: {{quantity}})"
+  },
+  "form": {
+    "paymentMethod": "Payment Method"
+  },
+  "paymentMethods": {
+    "cash": "Cash",
+    "credit_card": "Credit Card",
+    "debit_card": "Debit Card",
+    "bank_transfer": "Bank Transfer"
+  },
+  "button": {
+    "checkOut": "Check Out",
+    "complete": "Complete Check-out"
+  },
+  "guestInformation": "Guest Information"
+}
+

@@ -9,8 +9,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ErrorAlert } from '@/components/shared/ErrorAlert';
 import { LoadingSpinner } from '@/components/shared/LoadingSpinner';
 import { Hotel } from 'lucide-react';
+import { useTranslation } from '@/i18n';
 
 const LoginPage = () => {
+  const { t } = useTranslation('auth');
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { loading, error, isAuthenticated } = useAppSelector((state) => state.auth);
@@ -37,8 +39,8 @@ const LoginPage = () => {
             <Hotel className="h-8 w-8 text-primary-foreground" />
           </div>
           <div>
-            <CardTitle className="text-2xl">Room Master</CardTitle>
-            <CardDescription>Hotel Management System</CardDescription>
+            <CardTitle className="text-2xl">{t('title')}</CardTitle>
+            <CardDescription>{t('subtitle')}</CardDescription>
           </div>
         </CardHeader>
         <CardContent>
@@ -46,11 +48,11 @@ const LoginPage = () => {
             {error && <ErrorAlert message={error} onClose={() => dispatch(clearError())} />}
             
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t('email')}</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@roommaster.com"
+                placeholder={t('placeholders.email')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -59,11 +61,11 @@ const LoginPage = () => {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">{t('password')}</Label>
               <Input
                 id="password"
                 type="password"
-                placeholder="Enter your password"
+                placeholder={t('placeholders.password')}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -72,14 +74,14 @@ const LoginPage = () => {
             </div>
             
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? <LoadingSpinner size="sm" /> : 'Sign In'}
+              {loading ? <LoadingSpinner size="sm" /> : t('signIn')}
             </Button>
             
             <div className="mt-4 space-y-2 text-xs text-muted-foreground">
-              <p className="font-semibold">Demo Credentials:</p>
-              <p>Admin: admin@roommaster.com / admin123</p>
-              <p>Receptionist: receptionist@roommaster.com / reception123</p>
-              <p>Manager: manager@roommaster.com / manager123</p>
+              <p className="font-semibold">{t('demoCredentials.title')}</p>
+              <p>{t('demoCredentials.admin')}</p>
+              <p>{t('demoCredentials.receptionist')}</p>
+              <p>{t('demoCredentials.manager')}</p>
             </div>
           </form>
         </CardContent>

@@ -30,8 +30,11 @@ import { LoadingSpinner } from '@/components/shared/LoadingSpinner';
 import { ConfirmDialog } from '@/components/shared/ConfirmDialog';
 import { formatCurrency } from '@/utils/formatters';
 import { Plus, Pencil, Trash2 } from 'lucide-react';
+import { useTranslation } from '@/i18n';
 
 const RoomTypesPage = () => {
+  const { t } = useTranslation('rooms');
+  const tCommon = (key: string) => t(key, { ns: 'common' });
   const dispatch = useAppDispatch();
   const { roomTypes, loading } = useAppSelector((state) => state.roomTypes);
   
@@ -107,18 +110,18 @@ const RoomTypesPage = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Room Types</h1>
-          <p className="text-muted-foreground">Manage different room categories</p>
+          <h1 className="text-3xl font-bold">{t('roomTypes.title')}</h1>
+          <p className="text-muted-foreground">{t('roomTypes.description')}</p>
         </div>
         <Button onClick={() => handleOpenDialog()}>
           <Plus className="mr-2 h-4 w-4" />
-          Add Room Type
+          {t('roomTypes.addButton')}
         </Button>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>All Room Types</CardTitle>
+          <CardTitle>{t('roomTypes.title')}</CardTitle>
         </CardHeader>
         <CardContent>
           {loading ? (
@@ -127,11 +130,11 @@ const RoomTypesPage = () => {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Base Price</TableHead>
-                  <TableHead>Capacity</TableHead>
-                  <TableHead>Amenities</TableHead>
-                  <TableHead>Actions</TableHead>
+                  <TableHead>{t('roomTypes.table.name')}</TableHead>
+                  <TableHead>{t('roomTypes.table.basePrice')}</TableHead>
+                  <TableHead>{t('roomTypes.table.capacity')}</TableHead>
+                  <TableHead>{t('roomTypes.table.amenities')}</TableHead>
+                  <TableHead>{tCommon('actions')}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -139,7 +142,7 @@ const RoomTypesPage = () => {
                   <TableRow key={roomType.id}>
                     <TableCell className="font-medium">{roomType.name}</TableCell>
                     <TableCell>{formatCurrency(roomType.basePrice)}</TableCell>
-                    <TableCell>{roomType.capacity} guests</TableCell>
+                    <TableCell>{roomType.capacity} {tCommon('units.guests')}</TableCell>
                     <TableCell>
                       <div className="flex flex-wrap gap-1">
                         {roomType.amenities.slice(0, 3).map((amenity, idx) => (
@@ -191,13 +194,13 @@ const RoomTypesPage = () => {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>
-              {editingRoomType ? 'Edit Room Type' : 'Add Room Type'}
+              {editingRoomType ? t('roomTypes.dialog.edit') : t('roomTypes.dialog.add')}
             </DialogTitle>
           </DialogHeader>
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name">{t('roomTypes.form.name')}</Label>
                 <Input
                   id="name"
                   value={formData.name}
@@ -206,7 +209,7 @@ const RoomTypesPage = () => {
                 />
               </div>
               <div>
-                <Label htmlFor="basePrice">Base Price</Label>
+                <Label htmlFor="basePrice">{t('roomTypes.form.basePrice')}</Label>
                 <Input
                   id="basePrice"
                   type="number"
@@ -217,7 +220,7 @@ const RoomTypesPage = () => {
                 />
               </div>
               <div>
-                <Label htmlFor="capacity">Capacity</Label>
+                <Label htmlFor="capacity">{t('roomTypes.form.capacity')}</Label>
                 <Input
                   id="capacity"
                   type="number"
@@ -227,16 +230,16 @@ const RoomTypesPage = () => {
                 />
               </div>
               <div>
-                <Label htmlFor="amenities">Amenities (comma-separated)</Label>
+                <Label htmlFor="amenities">{t('roomTypes.form.amenities')}</Label>
                 <Input
                   id="amenities"
                   value={formData.amenities}
                   onChange={(e) => setFormData({ ...formData, amenities: e.target.value })}
-                  placeholder="WiFi, TV, Air Conditioning"
+                  placeholder={t('roomTypes.form.amenitiesPlaceholder')}
                 />
               </div>
               <div>
-                <Label htmlFor="description">Description</Label>
+                <Label htmlFor="description">{t('roomTypes.form.description')}</Label>
                 <Input
                   id="description"
                   value={formData.description}
@@ -246,10 +249,10 @@ const RoomTypesPage = () => {
             </div>
             <DialogFooter className="mt-4">
               <Button type="button" variant="outline" onClick={() => setIsDialogOpen(false)}>
-                Cancel
+                {tCommon('buttons.cancel')}
               </Button>
               <Button type="submit">
-                {editingRoomType ? 'Update' : 'Create'}
+                {editingRoomType ? tCommon('buttons.update') : tCommon('buttons.create')}
               </Button>
             </DialogFooter>
           </form>
@@ -260,14 +263,13 @@ const RoomTypesPage = () => {
       <ConfirmDialog
         open={isDeleteDialogOpen}
         onOpenChange={setIsDeleteDialogOpen}
-        title="Delete Room Type"
-        description="Are you sure you want to delete this room type? This action cannot be undone."
+        title={t('roomTypes.delete.title')}
+        description={t('roomTypes.delete.description')}
         onConfirm={handleDelete}
-        confirmText="Delete"
+        confirmText={tCommon('buttons.delete')}
       />
     </div>
   );
 };
 
 export default RoomTypesPage;
-

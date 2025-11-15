@@ -1,0 +1,34 @@
+{
+  "title": "Services",
+  "description": "Manage hotel services and amenities",
+  "addButton": "Add Service",
+  "allServices": "All Services",
+  "table": {
+    "serviceName": "Service Name",
+    "category": "Category",
+    "price": "Price",
+    "description": "Description"
+  },
+  "dialog": {
+    "add": "Add Service",
+    "edit": "Edit Service"
+  },
+  "form": {
+    "serviceName": "Service Name",
+    "category": "Category",
+    "price": "Price",
+    "description": "Description"
+  },
+  "categories": {
+    "foodBeverage": "Food & Beverage",
+    "laundry": "Laundry",
+    "spa": "Spa",
+    "transport": "Transport",
+    "other": "Other"
+  },
+  "delete": {
+    "title": "Delete Service",
+    "description": "Are you sure you want to delete this service?"
+  }
+}
+

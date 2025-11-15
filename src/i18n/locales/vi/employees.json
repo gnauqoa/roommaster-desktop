@@ -1,0 +1,35 @@
+{
+  "title": "Nhân viên",
+  "description": "Quản lý nhân viên khách sạn",
+  "addButton": "Thêm nhân viên",
+  "allEmployees": "Tất cả nhân viên",
+  "table": {
+    "name": "Họ tên",
+    "role": "Vai trò",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "status": "Trạng thái"
+  },
+  "dialog": {
+    "add": "Thêm nhân viên",
+    "edit": "Sửa thông tin nhân viên"
+  },
+  "form": {
+    "name": "Họ tên",
+    "role": "Vai trò",
+    "email": "Email",
+    "phone": "Số điện thoại"
+  },
+  "roles": {
+    "admin": "Quản trị",
+    "receptionist": "Lễ tân",
+    "manager": "Quản lý",
+    "housekeeper": "Buồng phòng",
+    "maintenance": "Bảo trì"
+  },
+  "delete": {
+    "title": "Xóa nhân viên",
+    "description": "Bạn có chắc chắn muốn xóa nhân viên này?"
+  }
+}
+

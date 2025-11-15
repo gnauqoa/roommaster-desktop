@@ -20,6 +20,7 @@ import { Badge } from '@/components/ui/badge';
 import { LoadingSpinner } from '@/components/shared/LoadingSpinner';
 import { ConfirmDialog } from '@/components/shared/ConfirmDialog';
 import { Plus, Pencil, Trash2, Filter } from 'lucide-react';
+import { useTranslation } from '@/i18n';
 
 const statusColors: Record<RoomStatus, string> = {
   available: 'bg-green-500',
@@ -29,6 +30,8 @@ const statusColors: Record<RoomStatus, string> = {
 };
 
 const RoomsPage = () => {
+  const { t } = useTranslation('rooms');
+  const tCommon = (key: string) => t(key, { ns: 'common' });
   const dispatch = useAppDispatch();
   const { rooms, loading } = useAppSelector((state) => state.rooms);
   const { roomTypes } = useAppSelector((state) => state.roomTypes);
@@ -107,31 +110,31 @@ const RoomsPage = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Rooms</h1>
-          <p className="text-muted-foreground">Manage hotel rooms and their status</p>
+          <h1 className="text-3xl font-bold">{t('rooms.title')}</h1>
+          <p className="text-muted-foreground">{t('rooms.description')}</p>
         </div>
         <Button onClick={() => handleOpenDialog()}>
           <Plus className="mr-2 h-4 w-4" />
-          Add Room
+          {t('rooms.addButton')}
         </Button>
       </div>
 
       <Card>
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle>All Rooms</CardTitle>
+            <CardTitle>{t('rooms.allRooms')}</CardTitle>
             <div className="flex items-center gap-2">
               <Filter className="h-4 w-4 text-muted-foreground" />
               <Select value={filterStatus} onValueChange={setFilterStatus}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Filter by status" />
+                  <SelectValue placeholder={t('rooms.filterByStatus')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Rooms</SelectItem>
-                  <SelectItem value="available">Available</SelectItem>
-                  <SelectItem value="occupied">Occupied</SelectItem>
-                  <SelectItem value="cleaning">Cleaning</SelectItem>
-                  <SelectItem value="maintenance">Maintenance</SelectItem>
+                  <SelectItem value="all">{t('rooms.allRooms')}</SelectItem>
+                  <SelectItem value="available">{tCommon('status.available')}</SelectItem>
+                  <SelectItem value="occupied">{tCommon('status.occupied')}</SelectItem>
+                  <SelectItem value="cleaning">{tCommon('status.cleaning')}</SelectItem>
+                  <SelectItem value="maintenance">{tCommon('status.maintenance')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -144,11 +147,11 @@ const RoomsPage = () => {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Room Number</TableHead>
-                  <TableHead>Type</TableHead>
-                  <TableHead>Floor</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Actions</TableHead>
+                  <TableHead>{t('rooms.table.roomNumber')}</TableHead>
+                  <TableHead>{t('rooms.table.type')}</TableHead>
+                  <TableHead>{t('rooms.table.floor')}</TableHead>
+                  <TableHead>{t('rooms.table.status')}</TableHead>
+                  <TableHead>{tCommon('actions')}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -158,10 +161,10 @@ const RoomsPage = () => {
                     <TableRow key={room.id}>
                       <TableCell className="font-medium">{room.roomNumber}</TableCell>
                       <TableCell>{roomType?.name || 'Unknown'}</TableCell>
-                      <TableCell>Floor {room.floor}</TableCell>
+                      <TableCell>{t('rooms.table.floor')} {room.floor}</TableCell>
                       <TableCell>
                         <Badge className={statusColors[room.status]}>
-                          {room.status}
+                          {tCommon(`status.${room.status}`)}
                         </Badge>
                       </TableCell>
                       <TableCell>
@@ -198,12 +201,12 @@ const RoomsPage = () => {
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>{editingRoom ? 'Edit Room' : 'Add Room'}</DialogTitle>
+            <DialogTitle>{editingRoom ? t('rooms.dialog.edit') : t('rooms.dialog.add')}</DialogTitle>
           </DialogHeader>
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
-                <Label htmlFor="roomNumber">Room Number</Label>
+                <Label htmlFor="roomNumber">{t('rooms.form.roomNumber')}</Label>
                 <Input
                   id="roomNumber"
                   value={formData.roomNumber}
@@ -212,13 +215,13 @@ const RoomsPage = () => {
                 />
               </div>
               <div>
-                <Label htmlFor="roomTypeId">Room Type</Label>
+                <Label htmlFor="roomTypeId">{t('rooms.form.roomType')}</Label>
                 <Select
                   value={formData.roomTypeId}
                   onValueChange={(value) => setFormData({ ...formData, roomTypeId: value })}
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select room type" />
+                    <SelectValue placeholder={t('rooms.form.selectRoomType')} />
                   </SelectTrigger>
                   <SelectContent>
                     {roomTypes.map((type) => (
@@ -230,7 +233,7 @@ const RoomsPage = () => {
                 </Select>
               </div>
               <div>
-                <Label htmlFor="floor">Floor</Label>
+                <Label htmlFor="floor">{t('rooms.form.floor')}</Label>
                 <Input
                   id="floor"
                   type="number"
@@ -240,7 +243,7 @@ const RoomsPage = () => {
                 />
               </div>
               <div>
-                <Label htmlFor="status">Status</Label>
+                <Label htmlFor="status">{t('rooms.form.status')}</Label>
                 <Select
                   value={formData.status}
                   onValueChange={(value) => setFormData({ ...formData, status: value as RoomStatus })}
@@ -249,19 +252,19 @@ const RoomsPage = () => {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="available">Available</SelectItem>
-                    <SelectItem value="occupied">Occupied</SelectItem>
-                    <SelectItem value="cleaning">Cleaning</SelectItem>
-                    <SelectItem value="maintenance">Maintenance</SelectItem>
+                    <SelectItem value="available">{tCommon('status.available')}</SelectItem>
+                    <SelectItem value="occupied">{tCommon('status.occupied')}</SelectItem>
+                    <SelectItem value="cleaning">{tCommon('status.cleaning')}</SelectItem>
+                    <SelectItem value="maintenance">{tCommon('status.maintenance')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
             </div>
             <DialogFooter className="mt-4">
               <Button type="button" variant="outline" onClick={() => setIsDialogOpen(false)}>
-                Cancel
+                {tCommon('buttons.cancel')}
               </Button>
-              <Button type="submit">{editingRoom ? 'Update' : 'Create'}</Button>
+              <Button type="submit">{editingRoom ? tCommon('buttons.update') : tCommon('buttons.create')}</Button>
             </DialogFooter>
           </form>
         </DialogContent>
@@ -271,14 +274,13 @@ const RoomsPage = () => {
       <ConfirmDialog
         open={isDeleteDialogOpen}
         onOpenChange={setIsDeleteDialogOpen}
-        title="Delete Room"
-        description="Are you sure you want to delete this room?"
+        title={t('rooms.delete.title')}
+        description={t('rooms.delete.description')}
         onConfirm={handleDelete}
-        confirmText="Delete"
+        confirmText={tCommon('buttons.delete')}
       />
     </div>
   );
 };
 
 export default RoomsPage;
-

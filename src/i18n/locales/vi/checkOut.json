@@ -1,0 +1,41 @@
+{
+  "title": "Trả phòng",
+  "description": "Xử lý trả phòng và tạo hóa đơn",
+  "occupiedRooms": "Phòng đang sử dụng",
+  "noOccupiedRooms": "Không có phòng đang sử dụng",
+  "table": {
+    "roomNumber": "Số phòng",
+    "floor": "Tầng",
+    "guest": "Khách",
+    "action": "Thao tác"
+  },
+  "dialog": {
+    "title": "Xử lý trả phòng"
+  },
+  "billSummary": {
+    "title": "Tóm tắt hóa đơn",
+    "roomCharges": "Tiền phòng",
+    "serviceCharges": "Tiền dịch vụ",
+    "tax": "Thuế (10%)",
+    "totalAmount": "Tổng tiền",
+    "depositRefund": "Hoàn cọc",
+    "finalAmount": "Số tiền thanh toán",
+    "servicesUsed": "Dịch vụ đã sử dụng",
+    "serviceQty": "Dịch vụ (SL: {{quantity}})"
+  },
+  "form": {
+    "paymentMethod": "Phương thức thanh toán"
+  },
+  "paymentMethods": {
+    "cash": "Tiền mặt",
+    "credit_card": "Thẻ tín dụng",
+    "debit_card": "Thẻ ghi nợ",
+    "bank_transfer": "Chuyển khoản"
+  },
+  "button": {
+    "checkOut": "Trả phòng",
+    "complete": "Hoàn tất trả phòng"
+  },
+  "guestInformation": "Thông tin khách"
+}
+

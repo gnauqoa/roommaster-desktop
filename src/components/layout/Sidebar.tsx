@@ -17,53 +17,56 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { logoutUser } from '@/redux/slices/auth.slice';
-
-const menuItems = [
-  {
-    title: 'Dashboard',
-    icon: LayoutDashboard,
-    path: '/dashboard',
-  },
-  {
-    title: 'Rooms',
-    icon: Home,
-    items: [
-      { title: 'Room Types', path: '/room-types' },
-      { title: 'Rooms', path: '/rooms' },
-    ],
-  },
-  {
-    title: 'Reservations',
-    icon: Calendar,
-    items: [
-      { title: 'Reservations', path: '/reservations' },
-      { title: 'Check-in', path: '/check-in' },
-      { title: 'Check-out', path: '/check-out' },
-    ],
-  },
-  {
-    title: 'Services',
-    icon: Briefcase,
-    path: '/services',
-  },
-  {
-    title: 'Reports',
-    icon: FileText,
-    items: [{ title: 'Invoices', path: '/invoices' }],
-  },
-  {
-    title: 'Admin',
-    icon: Users,
-    items: [{ title: 'Employees', path: '/employees' }],
-  },
-];
+import { LanguageSwitcher } from '@/components/shared/LanguageSwitcher';
+import { useTranslation } from '@/i18n';
 
 export const Sidebar = () => {
+  const { t } = useTranslation('navigation');
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { user } = useAppSelector((state) => state.auth);
   const [expandedGroups, setExpandedGroups] = useState<string[]>([]);
+
+  const menuItems = [
+    {
+      title: t('dashboard'),
+      icon: LayoutDashboard,
+      path: '/dashboard',
+    },
+    {
+      title: t('groups.rooms'),
+      icon: Home,
+      items: [
+        { title: t('roomTypes'), path: '/room-types' },
+        { title: t('rooms'), path: '/rooms' },
+      ],
+    },
+    {
+      title: t('groups.reservations'),
+      icon: Calendar,
+      items: [
+        { title: t('reservations'), path: '/reservations' },
+        { title: t('checkIn'), path: '/check-in' },
+        { title: t('checkOut'), path: '/check-out' },
+      ],
+    },
+    {
+      title: t('services'),
+      icon: Briefcase,
+      path: '/services',
+    },
+    {
+      title: t('groups.reports'),
+      icon: FileText,
+      items: [{ title: t('invoices'), path: '/invoices' }],
+    },
+    {
+      title: t('groups.admin'),
+      icon: Users,
+      items: [{ title: t('employees'), path: '/employees' }],
+    },
+  ];
 
   const toggleGroup = (title: string) => {
     setExpandedGroups((prev) =>
@@ -80,8 +83,8 @@ export const Sidebar = () => {
     <div className="flex h-screen w-64 flex-col bg-card border-r">
       {/* Logo/Header */}
       <div className="p-6">
-        <h1 className="text-2xl font-bold text-primary">Room Master</h1>
-        <p className="text-sm text-muted-foreground">Hotel Management</p>
+        <h1 className="text-2xl font-bold text-primary">{t('title', { ns: 'auth' })}</h1>
+        <p className="text-sm text-muted-foreground">{t('subtitle', { ns: 'auth' })}</p>
       </div>
 
       <Separator />
@@ -165,19 +168,20 @@ export const Sidebar = () => {
       <Separator />
 
       {/* User Info & Logout */}
-      <div className="p-4">
-        <div className="mb-3 rounded-lg bg-accent p-3">
+      <div className="p-4 space-y-3">
+        <div className="rounded-lg bg-accent p-3">
           <p className="text-sm font-medium">{user?.name}</p>
           <p className="text-xs text-muted-foreground">{user?.email}</p>
           <p className="text-xs text-muted-foreground capitalize">{user?.role}</p>
         </div>
+        <LanguageSwitcher />
         <Button
           variant="outline"
           className="w-full"
           onClick={handleLogout}
         >
           <LogOutIcon className="mr-2 h-4 w-4" />
-          Logout
+          {t('logout', { ns: 'auth' })}
         </Button>
       </div>
     </div>
