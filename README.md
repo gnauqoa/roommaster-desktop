@@ -249,16 +249,6 @@ The application supports multiple languages with English and Vietnamese currentl
 
 Users can switch languages using the language switcher button in the sidebar. The selected language is automatically saved and persisted across sessions.
 
-### For Developers
-
-See [TRANSLATION_GUIDE.md](./TRANSLATION_GUIDE.md) for detailed information on:
-- Adding new translations
-- Translation file structure
-- Vietnamese translation guidelines
-- Best practices
-
-See [I18N_IMPLEMENTATION_STATUS.md](./I18N_IMPLEMENTATION_STATUS.md) for implementation status and remaining tasks.
-
 ## Future Enhancements
 
 - Real-time notifications
